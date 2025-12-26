@@ -13,9 +13,7 @@ published: true
 1. **RunasCs**: 非対話型シェルで`RunasCs`を使ってユーザーを切り替え、user flagを取得
 1. **IIS仮想アカウント**: `IIS APPPOOL\DefaultAppPool`がマシンアカウント`G0$`として振る舞う
 
----
-
-# Enumeration
+# 🔎 Enumeration
 
 ## Port Scan
 
@@ -78,7 +76,7 @@ Host: school.flight.htb
 
 ---
 
-# Exploit - User Flag
+# ⚒️ Exploit -user flag-
 
 ## NTLMハッシュの窃取
 
@@ -230,7 +228,7 @@ ec1e***********************82d26
 
 ---
 
-# Internal Enumeration
+# 🔎 Enumeration
 
 ## 内部ポートの発見
 
@@ -277,7 +275,7 @@ Server username: IIS APPPOOL\DefaultAppPool
 
 ---
 
-# Exploit - Root Flag (想定外の解法)
+# 👻 Exploit -root flag- (想定外の解法)
 
 meterpreterの`getsystem`コマンドでSystem権限が取れてしまいました。
 
@@ -306,7 +304,7 @@ c3f0d***********************5b83d4
 
 ---
 
-# Exploit - Root Flag (想定解)
+# 👻 Exploit -root flag- (想定解)
 
 ## IIS仮想アカウントの特性
 
