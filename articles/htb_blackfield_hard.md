@@ -322,7 +322,9 @@ At line:1 char:1
 
 ## SeBackupPrivilege AD Attack
 
-Active DirectoryにおけるSeBackupPrivilege権限の悪用方法を調査しました。Windows Desktopの場合と異なり、ドメインコントローラからハッシュを抽出するには、SYSTEMハイブとともに`ntds.dit`ファイルが必要です。しかし、`ntds.dit`ファイルには課題があります。ターゲットマシンが稼働中だとファイルが使用中のため、従来の方法ではコピーできません。一般に、使用中のファイルはOSによってロックされ、直接アクセスが阻止されます。したがって、この制限を回避するにはDiskShadowの機能を使用する必要があります。これはWindowsに組み込まれた機能で、使用中のドライブのコピーを作成できます。
+[Hacking Articlesの記事](https://www.hackingarticles.in/windows-privilege-escalation-sebackupprivilege/)を参考にして、Active DirectoryにおけるSeBackupPrivilege権限の悪用を試みました。
+
+Windows Desktopの場合と異なり、ドメインコントローラからハッシュを抽出するには、SYSTEMハイブとともに`ntds.dit`ファイルが必要です。しかし、`ntds.dit`ファイルには課題があります。ターゲットマシンが稼働中だとファイルが使用中のため、従来の方法ではコピーできません。一般に、使用中のファイルはOSによってロックされ、直接アクセスが阻止されます。したがって、この制限を回避するにはDiskShadowの機能を使用する必要があります。これはWindowsに組み込まれた機能で、使用中のドライブのコピーを作成できます。
 
 ### Distributed Shell (DSH) ファイルの作成
 
